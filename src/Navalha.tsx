@@ -23,12 +23,12 @@ const fine = () => matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 const DAYS: [string, string][] = [
   ['Domingo', 'Fechado'],
-  ['Segunda', '13h às 20h'],
-  ['Terça', '9h às 20h'],
-  ['Quarta', '9h às 20h'],
-  ['Quinta', '9h às 20h'],
-  ['Sexta', '9h às 21h'],
-  ['Sábado', '8h às 18h'],
+  ['Segunda', '9h às 21h'],
+  ['Terça', '9h às 21h'],
+  ['Quarta', '9h às 21h'],
+  ['Quinta', '9h às 21h'],
+  ['Sexta', '8h às 22h30'],
+  ['Sábado', '8h às 20h'],
 ];
 
 const SERVICES = [
@@ -292,7 +292,7 @@ export function Navalha() {
         <section className="nv-hero" aria-label="Navalha Barbearia">
           <div className="nv-hero__meta">
             <span><span className="nv-dot" />{today === 0 ? 'Fechado hoje' : `Aberto hoje até ${todayHours.split(' às ')[1]}`}</span>
-            <span>Rua das Palmeiras, 120 · Centro</span>
+            <span>R. Bela Vista, 99 · Centro, Apucarana</span>
             <span>Sem hora marcada? Chega.</span>
           </div>
           <h1 className="nv-hero__word nv-d" aria-label="Cabelin">
@@ -398,7 +398,7 @@ export function Navalha() {
             </div>
             <div className="nv-map" aria-label="Mapa ilustrativo">
               <svg viewBox="0 0 400 400" fill="none" stroke="#1f4a55" strokeWidth="14" strokeLinecap="round"><path d="M-20 120 420 60M-20 260 420 300M120 -20 160 420M290 -20 250 420" /><path d="M-20 190 180 170 420 200" strokeWidth="22" stroke="#2b6270" /><path d="M200 -20 210 420" strokeWidth="6" strokeDasharray="2 18" /></svg>
-              <div className="nv-pin"><b>Cabelin · Rua das Palmeiras, 120</b><i /></div>
+              <div className="nv-pin"><b>Cabelin · R. Bela Vista, 99</b><i /></div>
             </div>
           </div>
           <p className="nv-giant nv-d" aria-hidden="true">Cabelin</p>
