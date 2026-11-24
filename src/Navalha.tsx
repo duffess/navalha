@@ -276,7 +276,7 @@ export function Navalha() {
         <div className="nv-intro__half nv-intro__top"><span className="nv-d">Navalha</span></div>
         <div className="nv-intro__half nv-intro__bot"><span className="nv-d">Navalha</span></div>
         <div className="nv-intro__blade" />
-        <svg className="nv-intro__razor" viewBox="0 0 160 40" fill="currentColor"><path d="M4 22c18-10 58-15 96-14h6v10H8z" /><rect x="104" y="12" width="54" height="9" rx="4.5" fill="#b8241c" /><circle cx="106" cy="16" r="4" fill="#15130f" /></svg>
+        <svg className="nv-intro__razor" viewBox="0 0 160 40" fill="currentColor"><path d="M4 22c18-10 58-15 96-14h6v10H8z" /><rect x="104" y="12" width="54" height="9" rx="4.5" fill="#0f5566" /><circle cx="106" cy="16" r="4" fill="#0c1416" /></svg>
         <p className="nv-intro__tag">Barbearia desde 2014 · marca fictícia</p>
         <button type="button" className="nv-skip">Pular</button>
       </div>
@@ -397,7 +397,7 @@ export function Navalha() {
               <a href="#" className="nv-big" onClick={openWa}><WaIcon />Agendar no WhatsApp</a>
             </div>
             <div className="nv-map" aria-label="Mapa ilustrativo">
-              <svg viewBox="0 0 400 400" fill="none" stroke="#3b4670" strokeWidth="14" strokeLinecap="round"><path d="M-20 120 420 60M-20 260 420 300M120 -20 160 420M290 -20 250 420" /><path d="M-20 190 180 170 420 200" strokeWidth="22" stroke="#4a568a" /><path d="M200 -20 210 420" strokeWidth="6" strokeDasharray="2 18" /></svg>
+              <svg viewBox="0 0 400 400" fill="none" stroke="#1f4a55" strokeWidth="14" strokeLinecap="round"><path d="M-20 120 420 60M-20 260 420 300M120 -20 160 420M290 -20 250 420" /><path d="M-20 190 180 170 420 200" strokeWidth="22" stroke="#2b6270" /><path d="M200 -20 210 420" strokeWidth="6" strokeDasharray="2 18" /></svg>
               <div className="nv-pin"><b>Navalha · Rua das Palmeiras, 120</b><i /></div>
             </div>
           </div>
