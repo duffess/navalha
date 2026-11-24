@@ -300,7 +300,7 @@ export function Navalha() {
             <i className="nv-hero__cut" />
           </h1>
           <div className="nv-hero__foot">
-            <p className="nv-hero__lead">Corte, barba e aquele café enquanto espera.</p>
+            <p className="nv-hero__lead">Você merece algo além do básico.</p>
             <a href="#visita" className="nv-seal" onClick={openWa} aria-label="Agendar no WhatsApp">
               <svg className="nv-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="nvc" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0" /></defs><text><textPath href="#nvc">AGENDAR NO ZAP · AGENDAR NO ZAP · </textPath></text></svg>
               <Scissors className="nv-ico" />
