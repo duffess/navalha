@@ -194,3 +194,6 @@
 
 /* Sobre a tabela, a bolha substitui o cursor */
 .nv:has(.nv-row:hover) .nv-cur{opacity:0}
+
+/* Mouse: o cursor do sistema some e fica só o pontinho do site */
+@media (hover:hover) and (pointer:fine){.nv,.nv *{cursor:none!important}}
