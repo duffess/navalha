@@ -249,7 +249,7 @@ export function Navalha() {
       if (fine()) {
         const c = q('.nv-cur')[0] as HTMLElement;
         const cx = gsap.quickTo(c, 'x', { duration: 0.2 }), cy = gsap.quickTo(c, 'y', { duration: 0.2 });
-        addEventListener('pointermove', (e) => { cx(e.clientX); cy(e.clientY); c.classList.toggle('nv-hot', !!(e.target as Element).closest?.('a,button')); });
+        addEventListener('pointermove', (e) => { cx(e.clientX); cy(e.clientY); c.classList.toggle('nv-hot', !!(e.target as Element).closest?.('a,button')); c.style.opacity = (e.target as Element).closest?.('.nv-row') ? '0' : '1'; });
       }
 
       const refresh = () => ScrollTrigger.refresh();
