@@ -273,8 +273,8 @@ export function Navalha() {
   return (
     <div className="nv" ref={root}>
       <div className="nv-intro" aria-hidden="true">
-        <div className="nv-intro__half nv-intro__top"><span className="nv-d">Navalha</span></div>
-        <div className="nv-intro__half nv-intro__bot"><span className="nv-d">Navalha</span></div>
+        <div className="nv-intro__half nv-intro__top"><span className="nv-d">Cabelin</span></div>
+        <div className="nv-intro__half nv-intro__bot"><span className="nv-d">Cabelin</span></div>
         <div className="nv-intro__blade" />
         <svg className="nv-intro__razor" viewBox="0 0 160 40" fill="currentColor"><path d="M4 22c18-10 58-15 96-14h6v10H8z" /><rect x="104" y="12" width="54" height="9" rx="4.5" fill="#0f5566" /><circle cx="106" cy="16" r="4" fill="#0c1416" /></svg>
         <p className="nv-intro__tag">Barbearia desde 2014 · marca fictícia</p>
@@ -401,7 +401,7 @@ export function Navalha() {
               <div className="nv-pin"><b>Cabelin · Rua das Palmeiras, 120</b><i /></div>
             </div>
           </div>
-          <p className="nv-giant nv-d" aria-hidden="true">Navalha</p>
+          <p className="nv-giant nv-d" aria-hidden="true">Cabelin</p>
           <div className="nv-foot">
             <span>Site de demonstração feito pela LYSS para a Cabelin.</span>
             <span>Quer um site assim? <a href={LYSS_WA} target="_blank" rel="noopener noreferrer">Feito pela LYSS</a></span>
