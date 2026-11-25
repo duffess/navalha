@@ -16,19 +16,19 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const LYSS_WA =
   'https://wa.me/5521992217782?text=' +
-  encodeURIComponent('Olá! Vi o site da Cabelin e quero um assim para minha barbearia.');
+  encodeURIComponent('Olá! Vi o site da Navalha e quero um assim para minha barbearia.');
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = () => matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 const DAYS: [string, string][] = [
   ['Domingo', 'Fechado'],
-  ['Segunda', '9h às 21h'],
-  ['Terça', '9h às 21h'],
-  ['Quarta', '9h às 21h'],
-  ['Quinta', '9h às 21h'],
-  ['Sexta', '8h às 22h30'],
-  ['Sábado', '8h às 20h'],
+  ['Segunda', '13h às 20h'],
+  ['Terça', '9h às 20h'],
+  ['Quarta', '9h às 20h'],
+  ['Quinta', '9h às 20h'],
+  ['Sexta', '9h às 21h'],
+  ['Sábado', '8h às 18h'],
 ];
 
 const SERVICES = [
@@ -120,7 +120,7 @@ export function Navalha() {
   const todayHours = DAYS[today][1];
 
   useEffect(() => {
-    document.title = 'Cabelin Barbearia | Demonstração LYSS';
+    document.title = 'Navalha Barbearia | Demonstração LYSS';
     const k = (e: KeyboardEvent) => e.key === 'Escape' && setModal(false);
     addEventListener('keydown', k);
     return () => removeEventListener('keydown', k);
@@ -249,7 +249,7 @@ export function Navalha() {
       if (fine()) {
         const c = q('.nv-cur')[0] as HTMLElement;
         const cx = gsap.quickTo(c, 'x', { duration: 0.2 }), cy = gsap.quickTo(c, 'y', { duration: 0.2 });
-        addEventListener('pointermove', (e) => { cx(e.clientX); cy(e.clientY); c.classList.toggle('nv-hot', !!(e.target as Element).closest?.('a,button')); c.style.opacity = (e.target as Element).closest?.('.nv-row') ? '0' : '1'; });
+        addEventListener('pointermove', (e) => { cx(e.clientX); cy(e.clientY); c.classList.toggle('nv-hot', !!(e.target as Element).closest?.('a,button')); });
       }
 
       const refresh = () => ScrollTrigger.refresh();
@@ -273,10 +273,10 @@ export function Navalha() {
   return (
     <div className="nv" ref={root}>
       <div className="nv-intro" aria-hidden="true">
-        <div className="nv-intro__half nv-intro__top"><span className="nv-d">Cabelin</span></div>
-        <div className="nv-intro__half nv-intro__bot"><span className="nv-d">Cabelin</span></div>
+        <div className="nv-intro__half nv-intro__top"><span className="nv-d">Navalha</span></div>
+        <div className="nv-intro__half nv-intro__bot"><span className="nv-d">Navalha</span></div>
         <div className="nv-intro__blade" />
-        <svg className="nv-intro__razor" viewBox="0 0 160 40" fill="currentColor"><path d="M4 22c18-10 58-15 96-14h6v10H8z" /><rect x="104" y="12" width="54" height="9" rx="4.5" fill="#0f5566" /><circle cx="106" cy="16" r="4" fill="#0c1416" /></svg>
+        <svg className="nv-intro__razor" viewBox="0 0 160 40" fill="currentColor"><path d="M4 22c18-10 58-15 96-14h6v10H8z" /><rect x="104" y="12" width="54" height="9" rx="4.5" fill="#b8241c" /><circle cx="106" cy="16" r="4" fill="#15130f" /></svg>
         <p className="nv-intro__tag">Barbearia desde 2014 · marca fictícia</p>
         <button type="button" className="nv-skip">Pular</button>
       </div>
@@ -284,7 +284,7 @@ export function Navalha() {
       <div className="nv-pole" aria-hidden="true"><i /></div>
 
       <header className="nv-top">
-        <b>Cabelin</b>
+        <b>Navalha</b>
         <nav><a href="#tabela">Tabela</a><a href="#ritual">O ritual</a><a href="#time">Barbeiros</a><a href="#visita" className="nv-top__cta">Agendar</a></nav>
       </header>
 
@@ -292,15 +292,15 @@ export function Navalha() {
         <section className="nv-hero" aria-label="Navalha Barbearia">
           <div className="nv-hero__meta">
             <span><span className="nv-dot" />{today === 0 ? 'Fechado hoje' : `Aberto hoje até ${todayHours.split(' às ')[1]}`}</span>
-            <span>R. Bela Vista, 99 · Centro, Apucarana</span>
+            <span>Rua das Palmeiras, 120 · Centro</span>
             <span>Sem hora marcada? Chega.</span>
           </div>
-          <h1 className="nv-hero__word nv-d" aria-label="Cabelin">
-            {'CABELIN'.split('').map((c, i) => <span className="nv-l" key={i} aria-hidden="true"><span>{c}</span></span>)}
+          <h1 className="nv-hero__word nv-d" aria-label="Navalha">
+            {'NAVALHA'.split('').map((c, i) => <span className="nv-l" key={i} aria-hidden="true"><span>{c}</span></span>)}
             <i className="nv-hero__cut" />
           </h1>
           <div className="nv-hero__foot">
-            <p className="nv-hero__lead">Você merece algo além do básico.</p>
+            <p className="nv-hero__lead">Corte, barba e aquele café enquanto espera.</p>
             <a href="#visita" className="nv-seal" onClick={openWa} aria-label="Agendar no WhatsApp">
               <svg className="nv-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="nvc" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0" /></defs><text><textPath href="#nvc">AGENDAR NO ZAP · AGENDAR NO ZAP · </textPath></text></svg>
               <Scissors className="nv-ico" />
@@ -397,13 +397,13 @@ export function Navalha() {
               <a href="#" className="nv-big" onClick={openWa}><WaIcon />Agendar no WhatsApp</a>
             </div>
             <div className="nv-map" aria-label="Mapa ilustrativo">
-              <svg viewBox="0 0 400 400" fill="none" stroke="#1f4a55" strokeWidth="14" strokeLinecap="round"><path d="M-20 120 420 60M-20 260 420 300M120 -20 160 420M290 -20 250 420" /><path d="M-20 190 180 170 420 200" strokeWidth="22" stroke="#2b6270" /><path d="M200 -20 210 420" strokeWidth="6" strokeDasharray="2 18" /></svg>
-              <div className="nv-pin"><b>Cabelin · R. Bela Vista, 99</b><i /></div>
+              <svg viewBox="0 0 400 400" fill="none" stroke="#3b4670" strokeWidth="14" strokeLinecap="round"><path d="M-20 120 420 60M-20 260 420 300M120 -20 160 420M290 -20 250 420" /><path d="M-20 190 180 170 420 200" strokeWidth="22" stroke="#4a568a" /><path d="M200 -20 210 420" strokeWidth="6" strokeDasharray="2 18" /></svg>
+              <div className="nv-pin"><b>Navalha · Rua das Palmeiras, 120</b><i /></div>
             </div>
           </div>
-          <p className="nv-giant nv-d" aria-hidden="true">Cabelin</p>
+          <p className="nv-giant nv-d" aria-hidden="true">Navalha</p>
           <div className="nv-foot">
-            <span>Site de demonstração feito pela LYSS para a Cabelin.</span>
+            <span>Site de demonstração. A Navalha é uma barbearia fictícia.</span>
             <span>Quer um site assim? <a href={LYSS_WA} target="_blank" rel="noopener noreferrer">Feito pela LYSS</a></span>
           </div>
         </section>
